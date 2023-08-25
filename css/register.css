@@ -1,68 +1,32 @@
-body {
-    background-color: black;
-}
-
-h1 {
-    font-weight: bold;
-    text-decoration: underline;
-    text-align: center;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.lion {
-    background-image: url("https://dearsam.com/img/800/600/resize/l/i/lion-black-and-white-50x70_3a189.jpg");
-    background-repeat: no-repeat;
-    width: 600px;
-    height: 600px;
-}
-
-button {
-    padding: 3px 15px;
-    border-radius: 10px;
-    background-color: transparent;
-    font-weight: bold;
-    color: white;
-}
-
-input {
-    display: block;
-    margin: 10px auto;
-}
-
-select{
-    width: 175px;
-    text-align: center;
-    margin: 5px auto;
-}
 
 form {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 900px;
-    width: 1200px;
-    margin: auto;
+    justify-content: space-around;
 }
 
 .flex {
+    background-image: url("https://i.pinimg.com/564x/c3/9b/cd/c39bcd8e70bc8930bee0a9601e76ccf1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    height: 600px;
+    width: 1000px;
+    /* align-items: center; */
     justify-content: center;
 }
 
-.connexion {
-    display: flex;
-    justify-content: end;
+input,
+select,
+.form-control {
+    width: 150px;
 }
 
+textarea {
+    width: 400px;
+}
 
-.buttons {
-    display: flex;
-    justify-content: space-between;
+.infos {
+    width: 400px;
+    text-align: left;
 }
