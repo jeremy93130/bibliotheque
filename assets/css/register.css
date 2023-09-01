@@ -1,32 +1,74 @@
-
-form {
-    display: flex;
-    justify-content: space-around;
-}
-
-.flex {
-    background-image: url("https://i.pinimg.com/564x/c3/9b/cd/c39bcd8e70bc8930bee0a9601e76ccf1.jpg");
+body {
+    background-image: url("https://images.alphacoders.com/508/508431.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
+
+}
+
+h1 {
+    font-size: 70px;
+    /* width: 800px; */
+    text-align: center;
+    color: white;
+}
+
+.formRegister {
+    background-color: rgba(54, 29, 29, 0.349);
+    height: 100vh;
     width: 1000px;
-    /* align-items: center; */
-    justify-content: center;
+    margin: auto;
 }
 
-input,
-select,
-.form-control {
-    width: 150px;
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 
-textarea {
-    width: 400px;
+.formulaire {
+    display: flex;
 }
 
 .infos {
-    width: 400px;
-    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    justify-content: center;
+}
+
+.messages {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+label {
+    color: white;
+}
+
+label,
+input {
+    width: 150px;
+    margin: 5px 0;
+}
+
+#conditions {
+    width: 15px;
+}
+
+select {
+    width: 158px;
+    margin: 5px 0;
+}
+
+button {
+    margin: 10px 30px;
+}
+
+button a {
+    background-color: transparent;
+    color: black;
+    border: none;
 }

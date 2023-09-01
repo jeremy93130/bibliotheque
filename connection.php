@@ -1,3 +1,6 @@
+<?php session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,20 +12,22 @@
 </head>
 
 <body>
-    <form action="./model/security.php" method="post">
+    <?php include_once("./inc/nav.php"); ?>
+    <form class="formConnection" action="./model/security.php" method="post">
         <h2>Page de connexion</h2>
 
-        <?php if (isset($_SESSION["error"])) { ?>
+        <?php if (!empty($_SESSION["error"])) { ?>
             <p>
                 <?= $_SESSION["error"]; ?>
             </p>
-        <?php } ?>
+        <?php }
+        unset($_SESSION['error']); ?>
         <div>
-            <label for="email">Pseudo : </label>
+            <label for="email">Email : </label>
             <input type="email" id="email" name="email">
         </div>
         <div>
-            <label for="password">Mot de passe </label>
+            <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password">
         </div>
         <div>
