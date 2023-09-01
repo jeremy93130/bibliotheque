@@ -2,11 +2,9 @@
 session_start();
 include_once("../inc/db_connection.php");
 
-
 if (isset($_POST["connexion"])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-
 
     // Se connecter à la base de données : 
     $db = dBConnexion();
@@ -31,8 +29,14 @@ if (isset($_POST["connexion"])) {
         $_SESSION["error"] = "Identifiant ou mot de passe incorrect.";
     } else {
         if (password_verify($password, $user["password"])) {
-            $_SESSION["welcome"] = "Bienvenue" . $user["firstname"];
-            header("Location : http://localhost/bibliophp/userinterface.php");
+            $_SESSION["welcome"] = " Bienvenue" . " " . $user["firstname"];
+
+            $_SESSION["id"] = $user["id"];
+            $_SESSION["prenom"] = $user["firstname"];
+            $_SESSION["nom"] = $user["lastname"];
+            $_SESSION["role"] = $user["role"];
+            header("Location: http://localhost/bibliophp/userinterface.php");
+            // echo "<script> location.href='http://localhost/bibliophp/userinterface.php'</script>";
         } else {
             echo "<script> location.href='http://localhost/bibliophp/connection.php'</script>";
             $_SESSION["error"] = "Identifiant ou mot de passe incorrect";

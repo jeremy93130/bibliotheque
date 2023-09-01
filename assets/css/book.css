@@ -1,0 +1,53 @@
+body {
+    background-image: url("https://images.alphacoders.com/508/508431.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    margin: 30  px 0;
+}
+
+input {
+    width: 250px;
+    padding: 2px 1px;
+}
+
+.flex {
+display: flex;
+flex-wrap: wrap;
+width: 550px;
+justify-content: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.buttons button{
+    margin: 20px 10px;
+    padding: 5px 15px;
+}
+
+button a {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: black;
+}

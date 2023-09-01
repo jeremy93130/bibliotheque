@@ -1,0 +1,32 @@
+body {
+    background-image: url("https://images.alphacoders.com/508/508431.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 56px;
+    color: white;
+    text-decoration: underline;
+}
+
+button {
+    margin: 0 20px;
+}
+
+button a {
+    font-size: 37px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(71, 27, 27);
+}
