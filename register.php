@@ -1,5 +1,6 @@
 <?php
 include_once("./inc/nav.php");
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +47,12 @@ include_once("./inc/nav.php");
                 </select>
                 <label for="conditions">accepter les conditions d'utilisations</label>
                 <input type="checkbox" id="conditions" name="conditions">
+                <?php if (!empty($_SESSION["errorConditions"])) { ?>
+                    <p>
+                        <?= $_SESSION["errorConditions"]; ?>
+                    </p>
+                <?php }
+                unset($_SESSION["errorConditions"]); ?>
             </div>
             <div>
                 <button type="submit" name="inscription">valider</button>

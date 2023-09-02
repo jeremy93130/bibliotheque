@@ -30,7 +30,6 @@ if (!isset($_SESSION["id"])) {
             <button type="submit"><a href="index.php">retour</a></button>
         </div>
     </form>
-
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("../inc/function.php");
 
 
@@ -14,18 +15,20 @@ if (isset($_POST["inscription"])) {
     $phone = htmlspecialchars($_POST["phone"]);
     $message = htmlspecialchars($_POST["message"]);
 
-    if (isset($_POST["conditions"])) {
-        $conditions = $_POST["conditions"];
-    } else {
-        echo 'conditions obligatoires';
-    }
 
 
     if (empty($civility) || empty($lastName) || empty($firstName) || empty($email) || empty($country) || empty($password) || empty($confirm) || empty($birthday) || empty($phone) || empty($message)) {
         echo "<p> Merci de remplir tous les champs demandés </p>";
     } else {
-        echo "<p> Félicitation vous êtes bien inscrits </p>";
-        header("refresh:2; http://localhost/biblioPHP/book.php");
+        if (isset($_POST["conditions"])) {
+            $conditions = $_POST["conditions"];
+            echo "<p> Félicitation vous êtes bien inscrits </p>";
+            header("refresh:2; http://localhost/biblioPHP/book.php");
+        } else {
+            $_SESSION["errorConditions"] = "Conditions obligatoires !";
+
+            header("Location: http://localhost/bibliophp/register.php");
+        }
     }
 }
 
